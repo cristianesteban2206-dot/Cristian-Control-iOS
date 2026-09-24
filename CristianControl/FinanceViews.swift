@@ -71,7 +71,7 @@ struct FinanceView: View {
                                 } label: {
                                     HStack {
                                         Image(systemName: entry.type == .expense ? "arrow.up.circle.fill" : "arrow.down.circle.fill")
-                                            .foregroundStyle(entry.type == .expense ? CCTheme.pink : .green)
+                                            .foregroundColor(entry.type == .expense ? CCTheme.pink : Color.green)
                                         VStack(alignment: .leading) {
                                             Text(entry.note.isEmpty ? entry.category : entry.note)
                                                 .foregroundStyle(CCTheme.ink)
@@ -81,7 +81,7 @@ struct FinanceView: View {
                                         Spacer()
                                         Text((entry.type == .expense ? "- " : "+ ") + entry.amount.ars)
                                             .font(.subheadline.bold())
-                                            .foregroundStyle(entry.type == .expense ? .primary : .green)
+                                            .foregroundColor(entry.type == .expense ? Color.primary : Color.green)
                                     }
                                     .padding(.vertical, 4)
                                 }
